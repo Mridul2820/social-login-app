@@ -6,6 +6,7 @@ import { FcGoogle } from "react-icons/fc";
 import { account } from "@/config/appwrite";
 
 const HomePage = () => {
+  const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
   return (
     <div className="flex justify-center items-center min-h-screen flex-col">
       <h1 className="text-2xl font-bold">Social Login</h1>
@@ -15,8 +16,8 @@ const HomePage = () => {
           onClick={() => {
             account.createOAuth2Session(
               "google",
-              "http://localhost:3000/dashboard", // Success URL
-              "http://localhost:3000" // Failure URL
+              `${BASE_URL}/dashboard`, // Success URL
+              `${BASE_URL}` // Failure URL
             );
           }}
         >
