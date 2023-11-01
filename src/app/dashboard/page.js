@@ -14,8 +14,6 @@ const Dashboard = () => {
     getAccount();
   }, []);
 
-  console.log(user);
-
   return (
     <div className="flex flex-col justify-center items-center p-5">
       <h1 className="text-3xl">Dashboard</h1>
